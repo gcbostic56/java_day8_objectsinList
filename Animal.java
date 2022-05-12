@@ -6,6 +6,18 @@ public class Animal {
         this.name = AnimalName;
         this.DogOrNot = Doggo;
     }
+    public Animal(String AnimalName) {
+        this.name = AnimalName;
+        this.DogOrNot = false;
+    }
+    public Animal(boolean Doggo) {
+        this.DogOrNot = Doggo;
+        this.name = "";
+    }
+    public Animal() {
+        this.name = "";
+        this.DogOrNot = false;
+    }
     public String getName() {
         return name;
     }

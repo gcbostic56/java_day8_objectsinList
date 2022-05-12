@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class App {
     public static Scanner scanner = new Scanner(System.in);
@@ -10,6 +11,11 @@ public class App {
         System.out.println("Entering nothing will stop the loopy.");
         
         ArrayList<Animal> list = new ArrayList<>();
+        Animal Steve = new Animal("Steve");
+        Animal bigFacts = new Animal(true);
+        Animal empty = new Animal();
+        Collections.addAll(list, Steve, bigFacts, empty);
+
         while(true) {
             boolean TrueOrNot = false;
             System.out.println("Please enter an animal name:");
@@ -34,6 +40,12 @@ public class App {
             System.out.println(animal);
     }
     ArrayList<TvShow> showList = new ArrayList<>();
+    TvShow BobsBurgers = new TvShow("Bob's Burgers");
+    TvShow FamilyGuy = new TvShow("Family Guy", 500);
+    TvShow Stinky = new TvShow(400);
+    TvShow GoT = new TvShow("Game of Thrones", "drama");
+    TvShow newEmpty = new TvShow();
+    Collections.addAll(showList, BobsBurgers, FamilyGuy, Stinky, GoT, newEmpty);
     System.out.println("Let's find out some tv show information");
     while(true) {
         System.out.println("Name of the show:");
@@ -56,6 +68,12 @@ public class App {
     }
         System.out.println("Let's play with some books.");
         ArrayList<Book> bookList = new ArrayList<>();
+        Book StormOfSwords = new Book("Storm of Swords");
+        Book Holes = new Book(400, 1982);
+        Book DiaryOfJane = new Book("Diary of Jane", 500);
+        Book noBook = new Book();
+        Book bookYear = new Book(1973);
+        Collections.addAll(bookList, StormOfSwords, Holes, DiaryOfJane, noBook, bookYear);
     while(true) {
         System.out.println("Enter a book name or enter an empty string to break program.");
         String bookName = scanner.nextLine();
